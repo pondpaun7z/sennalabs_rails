@@ -1,0 +1,12 @@
+<div class="col-md-3">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= person.first_name %> <%= person.last_name %></h5>
+      <div class="d-flex justify-content-end">
+        <%= link_to 'Edit', edit_person_path(person), class: 'btn btn-secondary mr-3' %>
+        <%= link_to 'Remove', edit_person_path(person), class: 'btn btn-outline-danger', data: { confirm: 'confirm' }, method: :delete %>
+      </div>
+    </div>
+  </div>
+</div>
