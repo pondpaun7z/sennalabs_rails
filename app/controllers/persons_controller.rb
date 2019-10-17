@@ -18,6 +18,7 @@ class PersonsController < ApplicationController
 
   def show
     @person = Person.find(params[:id])
+    @cars = @person.cars
   end
 
   def edit

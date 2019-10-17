@@ -1,0 +1,21 @@
+<%= form_for [@person, @car] do |f| %>
+  <div class="row">
+    <% if @car.errors.present? %>
+      <div class="col-md-3">
+        <div class="alert alert-danger" role="alert">
+          <%= @car.errors.full_messages.to_sentence %>
+        </div>
+      </div>
+      <div class="d-block w-100"></div>
+    <% end %>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="d-block w-100"></div>
+  </div>
+
+  <%= f.submit 'Save', class: 'btn btn-success' %>
+<% end %>

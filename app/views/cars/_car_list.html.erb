@@ -1,0 +1,13 @@
+<div class="card my-3">
+  <div class="card-body d-flex justify-content-between">
+    <p class="mb-0 my-auto">
+      <%= car.name %>
+    </p>
+
+    <div>
+      <%= link_to 'View', person_car_path(@person, car), class: 'btn btn-info mr-3' %>
+      <%= link_to 'Edit', edit_person_car_path(@person, car), class: 'btn btn-secondary mr-3' %>
+      <%= link_to 'Remove', person_car_path(@person, car), class: 'btn btn-outline-danger', data: { confirm: 'confirm' }, method: :delete %>
+    </div>
+  </div>
+</div>

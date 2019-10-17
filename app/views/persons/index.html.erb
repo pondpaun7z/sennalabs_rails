@@ -1,8 +1,7 @@
 <h2>Persons</h2>
 
-
 <%= link_to 'Add Person', new_person_path, class: 'btn btn-primary' %>
 
-<div class="row">
+<div class="row mt-2">
   <%= render partial: 'person_card', collection: @persons, as: :person %>
 </div>

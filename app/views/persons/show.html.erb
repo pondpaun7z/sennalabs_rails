@@ -1,0 +1,5 @@
+<%= link_to '< Back', persons_path %>
+<h3><%= @person.first_name %> <%= @person.last_name %></h3>
+
+<%= link_to 'Add Car', new_person_car_path(@person), class: 'btn btn-primary' %>
+<%= render partial: 'cars/car_list', collection: @cars, as: :car %>
