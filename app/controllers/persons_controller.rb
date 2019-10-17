@@ -40,6 +40,17 @@ class PersonsController < ApplicationController
     redirect_to persons_path
   end
 
+  def report
+    @persons = Person.all.includes(:cars)
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @persons.as_json('report')
+      end
+    end
+  end
+
   private
 
   def person_params

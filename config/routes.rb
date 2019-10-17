@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
-  get 'cars/index'
-
-  get 'cars/new'
-
-  get 'cars/edit'
-
-  get 'cars/show'
-
-  root 'persons#index'
+  root 'persons#report'
   resources :persons do
+    get 'report', on: :collection
+
     resources :cars
   end
 end
